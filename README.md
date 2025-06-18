@@ -16,8 +16,7 @@ The trained models (.pkl and .keras) and preprocessed feature files (.npy) are a
 You can directly run the Django web application to test the classification functionality without needing to rerun the training or preprocessing steps.
 
 **Folder Structure**
-gunshot_project - contains dataset folder, preprocessing script, model training code, and saved models  
-gunshot_sound_classification - Python virtual environment folder (not uploaded to GitHub)  
+gunshot_project - contains dataset folder, preprocessing script, model training code, and saved models   
 Website - Django web application  
 requirements.txt - list of Python dependencies  
 README.md - project instructions  
@@ -41,12 +40,13 @@ MODEL_DIR
 LOG_DIR  
 SRC_DIR  
 
-**Setup Instructions (PowerShell on Windows)**
+
+**Setup Instructions (Terminal on Windows)**
 1. Create and activate a virtual environment:
 
-cd "your path\Gunshot-Audio-Classifier"  
-python -m venv gunshot_sound_classification  
-.\gunshot_sound_classification\Scripts\activate  
+cd "your path\Gunshot-Audio-Classifier-main"
+python -m venv gunshot_sound_classification
+.\gunshot_sound_classification\Scripts\activate
 
 2. Install required libraries
 
@@ -59,21 +59,22 @@ You can directly run the web application.**
 
 **Running the Web Application**
 
-cd "your paths\Gunshot-Audio-Classifier"  
-.\gunshot_sound_classification\Scripts\activate  
-cd Website  
-python manage.py migrate  
-python manage.py runserver  
+cd "your path\Gunshot-Audio-Classifier-main"
+.\gunshot_sound_classification\Scripts\activate
+cd Website
+python manage.py migrate
+python manage.py runserver
 
 **Then open your browser and go to:  **
 http://127.0.0.1:8000/
 
 **Running Individual Python Scripts (Optional)**
 **If you want to manually run any model script such as svm.py, knn.py, or cnn.py, you can do the following:**
-cd "your path\Gunshot-Audio-Classifier"  
-.\gunshot_sound_classification\Scripts\activate  
-cd gunshot_project\src  
-python filename.py  
+
+cd "your path\Gunshot-Audio-Classifier-main"
+.\gunshot_sound_classification\Scripts\activate
+cd gunshot_project\src
+python filename.py
 
 Replace "filename.py" with the script name you want to run.
 
