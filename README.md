@@ -44,7 +44,7 @@ SRC_DIR
 **Setup Instructions (PowerShell on Windows)**
 1. Create and activate a virtual environment:
 
-cd "your path\FYP Project"  
+cd "your path\Gunshot-Audio-Classifier"  
 python -m venv gunshot_sound_classification  
 .\gunshot_sound_classification\Scripts\activate  
 
@@ -59,7 +59,7 @@ You can directly run the web application.**
 
 **Running the Web Application**
 
-cd "your paths\FYP Project"  
+cd "your paths\Gunshot-Audio-Classifier"  
 .\gunshot_sound_classification\Scripts\activate  
 cd Website  
 python manage.py migrate  
@@ -70,7 +70,7 @@ http://127.0.0.1:8000/
 
 **Running Individual Python Scripts (Optional)**
 **If you want to manually run any model script such as svm.py, knn.py, or cnn.py, you can do the following:**
-cd "your path\FYP Project"  
+cd "your path\Gunshot-Audio-Classifier"  
 .\gunshot_sound_classification\Scripts\activate  
 cd gunshot_project\src  
 python filename.py  
