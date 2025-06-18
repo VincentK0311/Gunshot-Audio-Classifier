@@ -41,6 +41,13 @@ LOG_DIR
 SRC_DIR  
 
 
+**Install Python**
+Python used: Python 3.11.9
+Link: https://www.python.org/downloads/release/python-3119/
+
+**Once you have download and install the python. **
+Follow this youtube: https://youtu.be/91SGaK7_eeY?si=Xnq2klMWPIxHeDvX
+
 **Setup Instructions (Terminal on Windows)**
 1. Create and activate a virtual environment:
 
