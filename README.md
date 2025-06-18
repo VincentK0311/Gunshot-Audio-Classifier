@@ -34,6 +34,7 @@ Gunshot-Audio-Classifier-main.zip\Gunshot-Audio-Classifier-main\gunshot_project\
 
 **How to Update File Paths**
 Open preprocess.py and change the following variables to match your folder location:
+
 DATA_DIR  
 PROCESSED_DATA_DIR  
 MODEL_DIR  
