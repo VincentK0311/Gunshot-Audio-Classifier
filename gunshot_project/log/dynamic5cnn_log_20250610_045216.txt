@@ -1,0 +1,29 @@
+🔄 Loading preprocessed dataset...
+🔀 Splitting data into 80% train and 20% validation sets (stratified)...
+⏱️ Data loading time: 36.06 seconds
+🚀 Starting GridSearchCV with 5-Fold Cross-Validation...
+⏱️ Total search time: 11704.18 seconds
+Best Parameters: {'dropout_rate': 0.3, 'fit__batch_size': 32, 'fit__epochs': 50, 'num_conv_layers': 3, 'num_filters': 128, 'optimizer': 'rmsprop'}
+Best Cross-Validation Accuracy: 87.29%
+
+📊 Final Evaluation on Validation Set with Best Model:
+✅ Accuracy on entire dataset: 90.62%
+
+📋 Classification Report:
+                  precision    recall  f1-score   support
+
+           AK-12       0.97      1.00      0.99        39
+           AK-47       0.93      0.93      0.93        29
+IMI Desert Eagle       0.91      0.80      0.85        40
+             M16       0.87      0.95      0.91        80
+            M249       0.84      0.93      0.88        40
+           MG-42       0.95      0.93      0.94        40
+             MP5       0.82      0.70      0.76        40
+     Zastava M92       1.00      1.00      1.00        33
+
+        accuracy                           0.91       341
+       macro avg       0.91      0.90      0.91       341
+    weighted avg       0.91      0.91      0.90       341
+
+🖼️ Confusion matrix saved to: /content/drive/MyDrive/FYP Project/gunshot_project/log/dynamic5cnn_confusion_matrix.png
+💾 CNN best model saved to: /content/drive/MyDrive/FYP Project/gunshot_project/models/dynamic5_cnn_best_model.keras

@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gun Recognition</title>
+    <link rel="stylesheet" href="{% static 'CSS/main.css' %}">
+    <script src="{% static 'JS/main.js' %}" defer></script>
+</head>
+<body>
+<div class="container">
+    <div class="overlay">
+        {% if result %}
+    <div class="error-message" style="color: red; font-weight: bold; margin-top: 10px;">
+        {{ result }}
+    </div>
+{% endif %}
+
+        
+        <h1>Gun Recognition</h1>
+        <div class="info-text">
+            <p>
+                🔫 <strong>Supported Guns:</strong><br>
+                AK-12, AK-47, IMI Desert Eagle, M16, M249, MG-42, MP5, Zastava M92
+            </p>
+            <p style="color: #0077cc; font-weight: bold;">
+                Only .wav audio files of 2 seconds or less are accepted.
+            </p>
+        </div>
+        <form method="post" enctype="multipart/form-data" id="uploadForm">
+            {% csrf_token %}
+
+            <!-- Drop + Click Upload -->
+            <div class="upload-box">
+                <div class="drop-area" id="drop-area">
+                    <input id="fileInput" name="audio_file" type="file" accept=".wav">
+                    <span class="upload-icon">&#8682;</span>
+                    <p id="fileLabel">Click or Drop .wav file here</p>
+                    <p class="hint">Supported: .wav</p>
+                </div>
+            </div>
+
+            <!-- Model Select -->
+            <div class="model-choice">
+                <label for="model">Select Model:</label>
+                <select name="model_choice" id="model">
+                    <option value="">-- Choose Model --</option>
+                    <option value="cnn">CNN</option>
+                    <option value="knn">KNN</option>
+                    <option value="svm">SVM</option>
+                </select>
+            </div>
+
+            <!-- Buttons -->
+            <div class="buttons">
+                <button type="submit" class="confirm" disabled>Confirm</button>
+                <button type="button" class="reset" id="resetBtn" disabled>Reset</button>
+            </div>
+        </form>
+
+        <!-- Loading Spinner -->
+        <div class="spinner" id="spinner">
+            <div class="loader"></div>
+            <p>Processing...</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

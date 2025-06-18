@@ -1,0 +1,28 @@
+🔄 Loading preprocessed dataset...
+⏱️ Data loading time: 0.62 seconds
+🚀 Training final SVM model with best hyperparameters...
+⏱️ Model training time: 0.57 seconds
+
+📊 Final Accuracy Summary:
+✅ Training Accuracy: 95.59%
+✅ Validation Accuracy: 93.26%
+
+📋 Classification Report:
+                  precision    recall  f1-score   support
+
+           AK-12       1.00      1.00      1.00        39
+           AK-47       0.97      1.00      0.98        29
+IMI Desert Eagle       0.89      0.80      0.84        40
+             M16       0.85      0.99      0.91        80
+            M249       0.93      0.93      0.93        40
+           MG-42       1.00      0.90      0.95        40
+             MP5       1.00      0.82      0.90        40
+     Zastava M92       0.97      1.00      0.99        33
+
+        accuracy                           0.93       341
+       macro avg       0.95      0.93      0.94       341
+    weighted avg       0.94      0.93      0.93       341
+
+⏱️ Evaluation time: 0.26 seconds
+🖼️ Confusion matrix saved to: C:\Users\19990\Desktop\FYP Project\gunshot_project\log\svm_confusion_matrix.png
+💾 SVM model saved to: C:\Users\19990\Desktop\FYP Project\gunshot_project\models\svm_best_model.pkl

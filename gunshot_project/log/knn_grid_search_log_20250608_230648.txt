@@ -1,0 +1,25 @@
+🔄 Loading preprocessed dataset...
+🚀 Performing GridSearchCV on training data...
+
+✅ Best Parameters: {'metric': 'manhattan', 'n_neighbors': 1, 'weights': 'uniform'}
+📈 Training Accuracy: 100.00%
+📈 Validation Accuracy: 90.62%
+
+📋 Classification Report:
+                  precision    recall  f1-score   support
+
+           AK-12       0.95      1.00      0.97        39
+           AK-47       1.00      0.93      0.96        29
+IMI Desert Eagle       0.90      0.65      0.75        40
+             M16       0.86      1.00      0.92        80
+            M249       0.95      0.88      0.91        40
+           MG-42       0.95      0.93      0.94        40
+             MP5       0.80      0.80      0.80        40
+     Zastava M92       0.94      1.00      0.97        33
+
+        accuracy                           0.91       341
+       macro avg       0.92      0.90      0.90       341
+    weighted avg       0.91      0.91      0.90       341
+
+💾 Best tuned model saved to: C:\Users\19990\Desktop\FYP Project\gunshot_project\models\knn_best_tuned_model.pkl
+✅ Hyperparameter tuning and evaluation complete.

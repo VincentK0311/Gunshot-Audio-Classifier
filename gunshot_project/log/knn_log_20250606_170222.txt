@@ -1,0 +1,29 @@
+🔄 Loading preprocessed dataset...
+⏱️ Data loading time: 0.52 seconds
+🚀 Training final KNN model with best hyperparameters...
+⏱️ Model training time: 0.00 seconds
+
+📊 Final Accuracy Summary:
+✅ Training Accuracy: 100.00%
+✅ Validation Accuracy: 96.77%
+
+📋 Classification Report:
+                  precision    recall  f1-score   support
+
+           AK-12       0.97      1.00      0.99        39
+           AK-47       1.00      1.00      1.00        29
+IMI Desert Eagle       0.93      0.95      0.94        40
+             M16       0.98      1.00      0.99        80
+            M249       0.95      0.95      0.95        40
+           MG-42       0.95      0.97      0.96        40
+             MP5       0.97      0.88      0.92        40
+     Zastava M92       1.00      0.97      0.98        33
+
+        accuracy                           0.97       341
+       macro avg       0.97      0.96      0.97       341
+    weighted avg       0.97      0.97      0.97       341
+
+⏱️ Evaluation time: 2.20 seconds
+🖼️ Confusion matrix saved to: C:\Users\19990\Desktop\FYP Project\gunshot_project\log\knn_confusion_matrix.png
+💾 KNN model saved to: C:\Users\19990\Desktop\FYP Project\gunshot_project\models\knn_best_model.pkl
+✅ KNN training complete with final configuration.

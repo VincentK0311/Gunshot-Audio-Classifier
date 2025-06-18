@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gun Recognition Result</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'CSS/result.css' %}">
+</head>
+<body>
+<div class="container">
+    <div class="result-container"> <!-- Wrap the two panels -->
+
+        <div class="left-panel">
+            {% if gun_image_url %}
+            <div class="image-panel">
+                <img src="{% static gun_image_url %}" alt="{{ result|slugify }} image">
+            </div>
+            {% endif %}
+
+            <div class="info-panel">
+                <h2>Gun Recognition Result</h2>
+
+                <div class="info-group">
+                    <p><strong>📁 File Name:</strong> {{ file_name }}</p>
+                    <p><strong>🧠 Model Used:</strong> {{ model_display_name }}</p>
+                    <p class="highlight"><strong>🔫 Predicted Gun Type:</strong> {{ result }}</p>
+                    <p><strong>⏱️ Processing Time:</strong> {{ elapsed }}</p>
+                </div>
+
+                <div class="audio-group">
+                    <p><strong>🎵 Audio Preview:</strong></p>
+                    <audio controls>
+                        <source src="{{ file_url }}" type="audio/wav">
+                        Your browser does not support audio playback.
+                    </audio>
+                </div>
+
+                <div class="actions">
+                    <a href="{% url 'upload_audio' %}" class="button">← Back to Main</a>
+                </div>
+            </div>
+        </div> <!-- End of Left Panel -->
+
+        {% if confidence_table %}
+        <div class="right-panel">
+            <div class="confidence-table">
+                <h3>Prediction Confidence Details</h3>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Gun Type</th>
+                                {% if confidence_table.0.svm %}<th>SVM Confidence %</th>{% endif %}
+                                {% if confidence_table.0.knn %}<th>KNN Confidence %</th>{% endif %}
+                                {% if confidence_table.0.cnn %}<th>CNN Confidence %</th>{% endif %}
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for row in confidence_table %}
+                            <tr>
+                                <td>{{ row.gun_type }}</td>
+                                {% if row.svm %}<td>{{ row.svm }}</td>{% endif %}
+                                {% if row.knn %}<td>{{ row.knn }}</td>{% endif %}
+                                {% if row.cnn %}<td>{{ row.cnn }}</td>{% endif %}
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div> <!-- End of Right Panel -->
+        {% endif %}
+
+    </div> <!-- End of result-container -->
+</div> <!-- End of container -->
+</body>
+</html>

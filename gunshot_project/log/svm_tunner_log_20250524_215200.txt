@@ -1,0 +1,28 @@
+🔄 Loading preprocessed dataset...
+🔍 Starting SVM hyperparameter tuning with 5-fold cross-validation...
+
+✅ Best Parameters: {'C': 10, 'decision_function_shape': 'ovo', 'gamma': 0.01, 'kernel': 'rbf'}
+📈 Cross-Validation Accuracy (on training data): 85.38%
+
+📊 Final Accuracy Summary:
+✅ Cross-Validation Accuracy (on training data): 85.38%
+✅ Training Accuracy (on full training set): 95.59%
+✅ Validation Accuracy (on hold-out set): 87.98%
+
+📋 Classification Report:
+                  precision    recall  f1-score   support
+
+           AK-12       1.00      0.97      0.99        39
+           AK-47       0.96      0.93      0.95        29
+IMI Desert Eagle       0.90      0.70      0.79        40
+             M16       0.76      0.97      0.85        80
+            M249       0.89      0.85      0.87        40
+           MG-42       0.92      0.90      0.91        40
+             MP5       0.87      0.68      0.76        40
+     Zastava M92       0.97      0.97      0.97        33
+
+        accuracy                           0.88       341
+       macro avg       0.91      0.87      0.89       341
+    weighted avg       0.89      0.88      0.88       341
+
+💾 Best SVM model saved to: C:\Users\19990\Desktop\FYP Project\gunshot_project\models\tuner_svm_best_model.pkl

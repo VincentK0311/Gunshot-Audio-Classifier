@@ -1,0 +1,28 @@
+🔄 Loading preprocessed dataset...
+⏱️ Data loading time: 0.51 seconds
+🚀 Training CNN model...
+⏱️ Model training time: 1011.96 seconds
+
+📊 Final Accuracy Summary:
+✅ Training Accuracy: 100.00%
+✅ Testing Accuracy: 96.77%
+
+📋 Classification Report:
+                  precision    recall  f1-score   support
+
+           AK-12       0.95      1.00      0.97        39
+           AK-47       1.00      0.97      0.98        29
+IMI Desert Eagle       0.95      0.97      0.96        40
+             M16       0.97      0.97      0.97        80
+            M249       0.93      0.97      0.95        40
+           MG-42       1.00      0.97      0.99        40
+             MP5       0.95      0.90      0.92        40
+     Zastava M92       1.00      0.97      0.98        33
+
+        accuracy                           0.97       341
+       macro avg       0.97      0.97      0.97       341
+    weighted avg       0.97      0.97      0.97       341
+
+⏱️ Evaluation time: 1.04 seconds
+🖼️ Confusion matrix saved to: C:\Users\19990\Desktop\FYP Project\gunshot_project\log\cnn_confusion_matrix.png
+💾 CNN model saved to: C:\Users\19990\Desktop\FYP Project\gunshot_project\log\cnn_best_model.keras
