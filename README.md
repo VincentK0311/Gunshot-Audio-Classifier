@@ -42,12 +42,14 @@ LOG_DIR
 SRC_DIR  
 
 **Setup Instructions (PowerShell on Windows)**
-1. Create and activate a virtual environment
+1. Create and activate a virtual environment:
+
 cd "your path\FYP Project"  
 python -m venv gunshot_sound_classification  
 .\gunshot_sound_classification\Scripts\activate  
 
 2. Install required libraries
+
 pip install -r requirements.txt  
 
 **Note:
