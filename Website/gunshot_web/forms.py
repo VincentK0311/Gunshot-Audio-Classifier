@@ -7,7 +7,6 @@ class AudioUploadForm(forms.Form):
 from django import forms
 
 MODEL_CHOICES = [
-    ('auto', 'Ensemble'),
     ('cnn', 'CNN'),
     ('knn', 'KNN'),
     ('svm', 'SVM'),
