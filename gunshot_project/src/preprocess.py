@@ -12,11 +12,14 @@ import time
 
 # ---------------------- CONFIGURATION ----------------------
 # on PC Set the base directory for your project
-DATA_DIR = "C:\\Users\\19990\\Desktop\\FYP Project\\gunshot_project\\data\\Gunshot audio dataset"
-PROCESSED_DATA_DIR = "C:\\Users\\19990\\Desktop\\FYP Project\\gunshot_project\\processed_data"
-MODEL_DIR = "C:\\Users\\19990\\Desktop\\FYP Project\\gunshot_project\\models"
-LOG_DIR = "C:\\Users\\19990\\Desktop\\FYP Project\\gunshot_project\\log"
-SRC_DIR = SRC_DIR = "C:\\Users\\19990\\Desktop\\FYP Project\\gunshot_project\\src"#used for inference in Django app (views.py)
+# change your path to the actual path where you have cloned the repository
+# e.g., "C:\\Users\\YourUsername\\Gunshot-Audio-Classifier-main
+DATA_DIR = "your path\\Gunshot-Audio-Classifier-main\\gunshot_project\\data\\Gunshot audio dataset"
+PROCESSED_DATA_DIR = "your path\\Gunshot-Audio-Classifier-main\\gunshot_project\\processed_data"
+MODEL_DIR = "your path\\Gunshot-Audio-Classifier-main\\gunshot_project\\models"
+LOG_DIR = "your path\\Gunshot-Audio-Classifier-main\\gunshot_project\\log"
+SRC_DIR = SRC_DIR = "your path\\Gunshot-Audio-Classifier-main\\gunshot_project\\src"#used for inference in Django app (views.py)
+# Ensure the directories are set correctly
 
 # Ensure directories exist
 os.makedirs(PROCESSED_DATA_DIR, exist_ok=True)
