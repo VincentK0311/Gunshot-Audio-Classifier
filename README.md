@@ -1,6 +1,15 @@
+**🔔 Note: For the best reading experience, download the README.md file to view the full instructions properly formatted. The GitHub web view may look unarranged or cluttered.**
+
 # Gunshot-Audio-Classifier
 FYP project for firearm classification using gunshot audio
 Gunshot Audio Classifier
+
+**Downloading the Project**
+To download this project:
+1. Visit the GitHub repository page  
+2. Click the green "Code" button  
+3. Select "Download ZIP"  
+4. Extract the ZIP file to your computer  
 
 This is a Final Year Project (FYP) that detects and classifies firearm types based on gunshot audio recordings. 
 The system uses machine learning models including Support Vector Machine (SVM), k-Nearest Neighbors (kNN), and 
@@ -34,11 +43,11 @@ Gunshot-Audio-Classifier-main.zip\Gunshot-Audio-Classifier-main\gunshot_project\
 **How to Update File Paths**
 Open preprocess.py and change the following variables to match your folder location:
 
-DATA_DIR  
-PROCESSED_DATA_DIR  
-MODEL_DIR  
-LOG_DIR  
-SRC_DIR  
+DATA_DIR            - "your path\\Gunshot-Audio-Classifier-main\\gunshot_project\\data\\Gunshot audio dataset"
+PROCESSED_DATA_DIR  - "your path\\Gunshot-Audio-Classifier-main\\gunshot_project\\processed_data"
+MODEL_DIR           - "your path\\Gunshot-Audio-Classifier-main\\gunshot_project\\models"
+LOG_DIR             - "your path\\Gunshot-Audio-Classifier-main\\gunshot_project\\log"
+SRC_DIR             - "your path\\Gunshot-Audio-Classifier-main\\gunshot_project\\src"
 
 
 **Install Python**
@@ -84,13 +93,6 @@ cd gunshot_project\src
 python filename.py
 
 Replace "filename.py" with the script name you want to run.
-
-**Downloading the Project**
-To download this project:
-1. Visit the GitHub repository page  
-2. Click the green "Code" button  
-3. Select "Download ZIP"  
-4. Extract the ZIP file to your computer  
 
 **Author**
 VincentK0311  
