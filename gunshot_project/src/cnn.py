@@ -88,14 +88,48 @@ reduce_lr = ReduceLROnPlateau(
 log("🚀 Training CNN model...")
 start_time = time.time()
 
-model.fit(X_train, to_categorical(y_train),
-          validation_data=(X_val, to_categorical(y_val)),
-          epochs=500,
-          batch_size=32,
-          verbose=1,
-          callbacks=[early_stop, reduce_lr])
+history = model.fit(X_train, to_categorical(y_train),
+                    validation_data=(X_val, to_categorical(y_val)),
+                    epochs=500,
+                    batch_size=32,
+                    verbose=1,
+                    callbacks=[early_stop, reduce_lr])
 
 log(f"⏱️ Model training time: {time.time() - start_time:.2f} seconds")
+
+# ---------------------- TRAINING HISTORY PLOTS ----------------------
+log("📉 Plotting training history (combined figure)...")
+
+fig, axes = plt.subplots(1, 2, figsize=(14, 5))
+
+# Plot 1: Training and Validation Accuracy
+axes[0].plot(history.history['accuracy'], label='Training Accuracy', color='blue')
+axes[0].plot(history.history['val_accuracy'], label='Validation Accuracy', color='green')
+axes[0].axhline(y=0.95, color='gray', linestyle='--', linewidth=1.2, label='Reference Line (95%)')
+axes[0].set_title("CNN Training and Validation Accuracy", fontsize=14)
+axes[0].set_xlabel("Epoch", fontsize=12)
+axes[0].set_ylabel("Accuracy", fontsize=12)
+axes[0].tick_params(labelsize=12)
+axes[0].legend(fontsize=11)
+axes[0].grid(True)
+
+# Plot 2: Training and Validation Loss
+axes[1].plot(history.history['loss'], label='Training Loss', color='blue')
+axes[1].plot(history.history['val_loss'], label='Validation Loss', color='orange')
+axes[1].set_title("CNN Training and Validation Loss", fontsize=14)
+axes[1].set_xlabel("Epoch", fontsize=12)
+axes[1].set_ylabel("Loss", fontsize=12)
+axes[1].tick_params(labelsize=12)
+axes[1].legend(fontsize=11)
+axes[1].grid(True)
+
+plt.tight_layout()
+combined_plot_path = os.path.join(LOG_DIR, "cnn_training_history_combined.png")
+plt.savefig(combined_plot_path, dpi=600)  # Save with higher DPI for report quality
+plt.show()
+plt.close()
+
+log(f"🖼️ Combined training history plot saved to: {combined_plot_path}")
 
 # ---------------------- FINAL EVALUATION ----------------------
 log("\n📊 Final Accuracy Summary:")
